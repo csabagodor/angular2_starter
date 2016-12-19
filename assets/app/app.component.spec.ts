@@ -1,14 +1,22 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {AppComponent} from './app.component';
+import {LogComponent} from './log/log.component';
+import {LogContentComponent} from './log/log-content.component';
+import {HttpModule} from '@angular/http';
 
 describe('AppComponent', () => {
 	beforeEach(() => {
 		TestBed.configureTestingModule({
-			declarations: [
-				AppComponent
+			imports: [
+				HttpModule
 			],
+			declarations: [
+				AppComponent,
+				LogComponent,
+				LogContentComponent
+			]
 		});
 		TestBed.compileComponents();
 	});
@@ -26,4 +34,3 @@ describe('AppComponent', () => {
 	}));
 
 });
-

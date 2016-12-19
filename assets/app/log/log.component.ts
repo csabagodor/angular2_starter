@@ -1,15 +1,15 @@
-import {Component, OnInit} from "@angular/core";
-import {LogService} from "./log.service";
+import {Component, OnInit} from '@angular/core';
+import {LogService} from './log.service';
 import {Log} from './log.model';
 
 @Component({
 	selector: 'app-log',
 	template: `
 		<div>
-			<button class="btn btn-primary" (click)="onTest()">Log test</button>
+			<button class='btn btn-primary' (click)='onTest()'>Log test</button>
 		</div>
 		<hr>
-		<app-log-content [log]="log" *ngFor="let log of logs"></app-log-content>
+		<app-log-content [log]='log' *ngFor='let log of logs'></app-log-content>
 	`,
 	providers: [LogService]
 })
@@ -21,7 +21,7 @@ export class LogComponent implements OnInit {
 	ngOnInit() {
 		this.logService.getLogs()
 			.subscribe(
-				(logs) => {
+				(logs: Log[]) => {
 					this.logs = logs;
 				}
 			);
@@ -29,7 +29,7 @@ export class LogComponent implements OnInit {
 
 	onTest() {
 		this.logService.startPh().subscribe(
-			//result => console.log(result)
+			// result => console.log(result)
 		);
 	}
 }

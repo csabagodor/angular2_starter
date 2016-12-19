@@ -55,19 +55,15 @@ class Server {
 	middleware() {
 		this.express.use(require('webpack-dev-middleware')(this.compiler, {
 			noInfo: true,
-			watchOptions: {
-				aggregateTimeout: 300,
-				poll: true
-			},
 			publicPath: config.output.publicPath
 		}));
 	}
 
 	route() {
-		this.express.get('/', function (req, res) {
+		this.express.get('/', function (req: express.Request, res: express.Response) {
 			res.sendFile(path.join(__dirname, '../public/index.html'));
 		});
-		this.express.listen(this.port, (err:string) => {
+		this.express.listen(this.port, (err: string) => {
 			if (err) {
 				console.log(err);
 			} else {
