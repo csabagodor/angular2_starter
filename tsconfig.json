@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+		"allowJs": true,
+		"emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5",
+		"typeRoots": [
+			"node_modules/@types"
+		]
+	},
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true
+  },
+  "exclude": [
+		"assets",
+		"routes",
+    "node_modules"
+  ],
+  "compileOnSave": true
+}
