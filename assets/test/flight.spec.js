@@ -7,8 +7,6 @@ describe('flightSF', function () {
 
 	afterEach(function () {
 		//browser.get('http://local.liligo.com');
-		//**TEST valami commetn
-		
 		browser.executeScript('if(window.localStorage){window.localStorage.clear();}');
 	});
 

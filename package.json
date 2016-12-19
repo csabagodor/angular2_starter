@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@angular/core": "^2.2.4",
+    "@angular/core": "https://registry.npmjs.org/@angular/core/-/core-2.2.4.tgz",
     "@types/es6-collections": "^0.5.29",
     "@types/es6-promise": "0.0.32",
     "angular-cli": "1.0.0-beta.22-1",
@@ -29,6 +29,7 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "1.7.0",
+    "logger": "0.0.1",
     "node-sass": "3.13.1",
     "npm": "^4.0.5",
     "npm-run-all": "3.1.2",
