@@ -2,7 +2,6 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import {CheckerPlugin} from 'awesome-typescript-loader';
 import * as validate from 'webpack-validator';
-import {TsConfigPathsPlugin} from 'awesome-typescript-loader';
 
 const config = {
 	devtool: 'inline-source-map',
@@ -24,10 +23,7 @@ const config = {
 			/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
 			__dirname
 		),
-		new CheckerPlugin(),
-		new TsConfigPathsPlugin({
-			useCache: false
-		})
+		new CheckerPlugin()
 	],
 	module: {
 		loaders: [
@@ -55,7 +51,7 @@ const config = {
 				loaders: ['raw-loader', 'sass-loader']
 			}
 		]
-	},
+	}
 };
 
 export default validate(config);

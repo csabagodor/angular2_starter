@@ -16,7 +16,7 @@
 	},
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true
-  },
+	},
   "exclude": [
 		"assets",
 		"routes",

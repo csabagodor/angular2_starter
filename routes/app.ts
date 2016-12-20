@@ -54,7 +54,9 @@ class Server {
 
 	middleware() {
 		this.express.use(require('webpack-dev-middleware')(this.compiler, {
-			noInfo: true,
+			watchOptions: {
+				aggregateTimeout : 300
+			},
 			publicPath: config.output.publicPath
 		}));
 	}
