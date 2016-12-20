@@ -20,6 +20,7 @@
   "exclude": [
 		"assets",
 		"routes",
+		"models",
     "node_modules"
   ],
   "compileOnSave": true
