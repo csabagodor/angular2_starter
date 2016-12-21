@@ -12,7 +12,8 @@ module.exports = {
 		loaders: [
 			{loader: 'raw', test: /\.(css|html)$/},
 			{exclude: /node_modules/, loaders: [
-				'ts-loader',
+				'@angularclass/hmr-loader',
+				'awesome-typescript-loader',
 				'angular2-template-loader',
 				'angular2-router-loader'
 			], test: /\.ts$/},

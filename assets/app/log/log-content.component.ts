@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Log} from './log.model';
+import { AppState } from '../app.service';
 
 @Component({
 	selector: 'app-log-content',
@@ -10,5 +11,5 @@ import {Log} from './log.model';
 export class LogContentComponent {
 	@Input() log: Log;
 
-	constructor() {}
+	constructor(public appState: AppState) {}
 }

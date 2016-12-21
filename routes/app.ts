@@ -54,10 +54,18 @@ class Server {
 
 	middleware() {
 		this.express.use(require('webpack-dev-middleware')(this.compiler, {
+			hot: true,
+			filename: config.output.filename,
 			watchOptions: {
-				aggregateTimeout : 300
+				aggregateTimeout : 1000
 			},
 			publicPath: config.output.publicPath
+		}));
+
+		this.express.use(require('webpack-hot-middleware')(this.compiler, {
+			log: console.log,
+			path: '/__webpack_hmr',
+			heartbeat: 10 * 1000,
 		}));
 	}
 
@@ -66,10 +74,10 @@ class Server {
 			res.sendFile(path.join(__dirname, '../public/index.html'));
 		});
 		this.express.listen(this.port, (err: string) => {
-			if (err) {
+			if (err) {11
 				console.log(err);
 			} else {
-				open('http://localhost:' + this.port);
+				open('http://localhost:' + this.port, 'chrome');
 			}
 		});
 	}

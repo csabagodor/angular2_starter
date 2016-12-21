@@ -1,27 +1,29 @@
 {
-  "compilerOptions": {
+	"compilerOptions": {
 		"allowJs": true,
 		"emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "removeComments": false,
-    "sourceMap": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "target": "es5",
+		"experimentalDecorators": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noImplicitAny": false,
+		"strictNullChecks": false,
+		"removeComments": false,
+		"sourceMap": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"target": "es5",
 		"typeRoots": [
 			"node_modules/@types"
 		]
 	},
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true
+	"awesomeTypescriptLoaderOptions": {
+		"useWebpackText": true
 	},
-  "exclude": [
+	"exclude": [
 		"assets",
 		"routes",
 		"models",
-    "node_modules"
-  ],
-  "compileOnSave": true
+		"node_modules"
+	],
+	"compileOnSave": false,
+	"buildOnSave": false
 }

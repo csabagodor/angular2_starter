@@ -1,10 +1,9 @@
 /// <reference path="../../node_modules/@types/jasmine/index.d.ts" />
-
-import {TestBed, async} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {LogComponent} from './log/log.component';
-import {LogContentComponent} from './log/log-content.component';
-import {HttpModule} from '@angular/http';
+import { TestBed, async } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
+import { AppComponent } from './app.component';
+import { LogComponent } from './log/log.component';
+import { LogContentComponent } from './log/log-content.component';
 
 describe('AppComponent', () => {
 	beforeEach(() => {
