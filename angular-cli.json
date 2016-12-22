@@ -9,7 +9,7 @@
       "assets": [
         "assets"
       ],
-      "main": "main.ts",
+      "main": "main.browser.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "mobile": false,

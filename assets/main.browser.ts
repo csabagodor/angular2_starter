@@ -11,12 +11,14 @@ import { AppComponent } from './app/app.component';
 import { ApplicationRef, NgModule } from '@angular/core';
 import { LogComponent } from './app/log/log.component';
 import { LogContentComponent } from './app/log/log-content.component';
+import AppModule from './app/app.module';
 
 @NgModule({
 	bootstrap: [AppComponent],
 	imports: [
 		BrowserModule,
-		HttpModule
+		HttpModule,
+		AppModule,
 	],
 	declarations: [
 		LogComponent,
@@ -64,7 +66,6 @@ class MainModule {
 		delete store.disposeOldHosts;
 	}
 }
-
 
 export function main() {
 	return platformBrowserDynamic().bootstrapModule(MainModule);
