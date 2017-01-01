@@ -1,11 +1,12 @@
-import {Injectable} from '@angular/core';
-import {Http, Headers, Response} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http, Headers, Response } from '@angular/http';
 import 'rxjs/Rx';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class LogService {
-	constructor(private http: Http) {}
+	constructor(private http: Http) {
+	}
 
 	startPh() {
 		let headers = new Headers();
@@ -13,7 +14,7 @@ export class LogService {
 		return this.http.post('http://localhost:3000/log', JSON.stringify({
 			title: 'teszt123',
 			description: 'szöveg tewszt'
-		}), {headers: headers})
+		}), { headers: headers })
 			.map((response: Response) => response.json())
 			.catch((error: Response) => Observable.throw(error.json()));
 	}

@@ -8,7 +8,7 @@ export interface State {
 
 const defaultState: State = {
 // define your initial state here
-}
+};
 
 const _store = new BehaviorSubject<State>(defaultState);
 
@@ -17,7 +17,7 @@ export class AppState {
 	private _store = _store;
 	changes = this._store
 		.asObservable()
-		.distinctUntilChanged()
+		.distinctUntilChanged();
 
 	setState(state: State) {
 		this._store.next(state);

@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {Log} from './log.model';
+import { Component, Input } from '@angular/core';
+import { Log } from './log.model';
 import { AppState } from '../app.service';
 
 @Component({
@@ -11,5 +11,6 @@ import { AppState } from '../app.service';
 export class LogContentComponent {
 	@Input() log: Log;
 
-	constructor(public appState: AppState) {}
+	constructor(public appState: AppState) {
+	}
 }

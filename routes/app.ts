@@ -74,7 +74,7 @@ class Server {
 			res.sendFile(path.join(__dirname, '../public/index.html'));
 		});
 		this.express.listen(this.port, (err: string) => {
-			if (err) {11
+			if (err) {
 				console.log(err);
 			} else {
 				open('http://localhost:' + this.port, 'chrome');

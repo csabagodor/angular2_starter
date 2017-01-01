@@ -5,7 +5,6 @@ import * as validate from 'webpack-validator';
 
 const config = {
 	devtool: 'inline-source-map',
-	debug: true,
 	context: path.resolve(__dirname),
 	entry: [
 		'webpack-hot-middleware/client?path=/__webpack_hmr&reload=true',
@@ -19,8 +18,7 @@ const config = {
 	output: {
 		path: path.resolve(__dirname, 'public/app'),
 		publicPath: '/app/',
-		filename: 'bundle.js',
-		hotUpdateMainFilename: 'hot/hot-update.json'
+		filename: 'bundle.js'
 	},
 
 	plugins: [
